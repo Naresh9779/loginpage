@@ -1,9 +1,11 @@
 const mongoose =require("mongoose");
-mongoose.connect("mongodb://localhost:27017/students",{
+const DB = 'mongodb://localhost:27017';
+mongoose.connect(DB,{
 
-useNewUrlParser:true,
+ useNewUrlParser:true,
  useUnifiedTopology:true,
- useCreateIndex:true
+ //useCreateIndex:true
+  //useFindAndModify:false
 }).then(()=>{
 
 
