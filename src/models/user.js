@@ -1,5 +1,5 @@
 const mongoose=require("mongoose");
-const { stringify } = require("qs");
+
 const userSchema =new mongoose.Schema({
 
 username:
@@ -29,5 +29,5 @@ unique:true,
 
 })
 
-const  Register = new mongoose.model("Register",userSchema);
-module.exports=Register;
+const  user= new mongoose.model("Register",userSchema);
+module.exports=user;

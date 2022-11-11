@@ -9,16 +9,14 @@ const static_path=path.join(__dirname,"../public");
 app.use(express.static(static_path))
 app.get("/",(req,res)=>{
 
-
- 
-res.send("hLo World");
-console.log("Request Recived ..........");
+res.render("index")
 
 });
+
 app.post("/user",async(req,res)=>{
 
     try{
-  const registeruser= new Register({
+  const registeruser= new user({
 
 
   username: req.body.username,
